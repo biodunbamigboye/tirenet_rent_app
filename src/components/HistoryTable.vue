@@ -31,7 +31,9 @@
               </v-col>
               <v-spacer></v-spacer>
               <v-col cols="12" sm="6" md="3">
-                <v-btn color="secondary">New Rent</v-btn>
+                <v-btn color="secondary" :to="{ name: 'create-contract' }"
+                  >New Rent</v-btn
+                >
               </v-col>
             </v-row>
             <div>

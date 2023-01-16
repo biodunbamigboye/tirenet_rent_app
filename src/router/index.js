@@ -14,6 +14,11 @@ const routes = [
     name: "history",
     component: () => import("../components/HistoryTable.vue"),
   },
+  {
+    path: "/contract/create",
+    name: "create-contract",
+    component: () => import("../components/ContractForm.vue"),
+  },
   // {
   //   path: "/about",
   //   name: "about",
