@@ -18,7 +18,13 @@
         </v-col>
 
         <v-col cols="12" sm="6" md="1">
-          <v-btn elevation="4" width="100%" color="error">Cancel</v-btn>
+          <v-btn
+            elevation="4"
+            width="100%"
+            :to="{ name: 'history' }"
+            color="error"
+            >Cancel</v-btn
+          >
         </v-col>
 
         <v-col cols="12" sm="6" md="1">
