@@ -72,7 +72,6 @@
                 v-model="form.insurance"
                 label="Client Contact Reference(Insurance)"
                 dense
-                required
               ></v-text-field>
             </v-col>
 
@@ -204,16 +203,67 @@
             <v-col cols="12" sm="12" md="12">
               <hr class="hr-text" data-content="Attachments" />
             </v-col>
-            <v-col> <v-icon>mdi-file-pdf-box</v-icon> Prise en charge </v-col>
             <v-col>
-              <v-icon>mdi-smart-card</v-icon> Driving License Recto
+              <label for="prise_en_charge" style="cursor: pointer">
+                <v-icon>mdi-file-pdf-box</v-icon> Prise en charge
+              </label>
+            </v-col>
+            <v-file-input
+              v-model="form.attachments.prise_en_charge"
+              label="Attachments"
+              multiple
+              dense
+              outlined
+              id="prise_en_charge"
+              style="display: none"
+            ></v-file-input>
+            <v-col>
+              <label for="driving_license_recto" style="cursor: pointer">
+                <v-icon>mdi-smart-card</v-icon> Driving License Recto
+              </label>
+
+              <v-file-input
+                v-model="form.attachments.prise_en_charge"
+                label="Attachments"
+                multiple
+                dense
+                outlined
+                id="driving_license_recto"
+                style="display: none"
+              ></v-file-input>
             </v-col>
 
             <v-col>
-              <v-icon>mdi-smart-card</v-icon> Driving License Verso
+              <label for="driving_license_verso" style="cursor: pointer">
+                <v-icon>mdi-smart-card</v-icon> Driving License Verso
+              </label>
+
+              <v-file-input
+                v-model="form.attachments.prise_en_charge"
+                label="Attachments"
+                multiple
+                dense
+                outlined
+                id="driving_license_verso"
+                style="display: none"
+              ></v-file-input>
             </v-col>
 
-            <v-col> <v-icon>mdi-file-pdf-box</v-icon> Contract Signed </v-col>
+            <v-col>
+              <label for="contract_signed" style="cursor: pointer">
+                <v-icon>mdi-file-pdf-box</v-icon> Contract Signed
+              </label>
+
+              <v-file-input
+                v-model="form.attachments.prise_en_charge"
+                label="Attachments"
+                multiple
+                dense
+                outlined
+                id="contract_signed"
+                style="display: none"
+              ></v-file-input>
+            </v-col>
           </v-row>
         </div>
       </div>
@@ -229,6 +279,13 @@ export default {
         client: "",
         start_date: "",
         end_date: "",
+        pickup_location: "",
+        delivery_location: "",
+        internal_reference: "",
+        private_client: "",
+        insurance: "",
+        note: "",
+        attachments: {},
         driver: {
           first_name: "",
           last_name: "",
