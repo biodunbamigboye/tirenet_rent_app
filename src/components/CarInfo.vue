@@ -107,7 +107,7 @@ export default {
 .remove-space-around {
   padding-bottom: 0px;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 10px;
   padding-top: 0px;
 }
 </style>
